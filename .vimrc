@@ -1,3 +1,7 @@
+" kojis custom vim settings:
+nnoremap <Del> x
+inoremap <Del> <C-o>x
+
 " Use the Solarized Dark theme
 set background=dark
 colorscheme solarized
@@ -50,7 +54,7 @@ set cursorline
 set tabstop=2
 " Show “invisible” characters
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
+" set list
 " Highlight searches
 set hlsearch
 " Ignore case of searches
