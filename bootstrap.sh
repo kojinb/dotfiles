@@ -12,7 +12,10 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
-	source ~/.bash_profile;
+	if [[ "$SOURCING_DOTFILES" != "1" ]]; then
+		export SOURCING_DOTFILES=1
+		source ~/.bash_profile
+	fi
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

@@ -14,7 +14,6 @@ alias webpacker="dc logs -f -n=100 webpacker"
 alias fix_student="mv submods/bubblesheet-enyo/.git.bak submods/bubblesheet-enyo/.git && rm -rf submods/bubblesheet-enyo/node_modules"
 alias fix_submods="mc && git submodule update --init --recursive"
 alias mc_rake="mc && dc exec web bundle exec rake"
-alias reload_terminal="source ~/.zshrc"
 alias tsc="mc && dc run webpacker yarn tsc"
 alias lint="mc && dc run webpacker yarn lint"
 alias js_tests="mc && dc run js_specs yarn test"
@@ -25,7 +24,7 @@ alias run_tests="mc && dc run webpacker yarn tsc && dc run webpacker yarn lint &
 alias rapture_assume="rapture assume arn:aws:iam::830473435438:role/xacct/power-user"
 alias run_rails="mc && dc run --rm web bin/rails"
 alias sb_update="mc && dc exec storybook yarn test-storybook:images:update"
-alias source="cd ~/Projects/dotfiles && source bootstrap.sh"
+alias reload="source ~/Projects/dotfiles/bootstrap.sh"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -160,7 +159,7 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Reload the shell (i.e. invoke as a login shell)
-alias reload="exec ${SHELL} -l"
+# alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'

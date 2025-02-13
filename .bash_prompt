@@ -114,9 +114,8 @@ fi;
 # PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 # export PS1;
 
-# custom prompt:
-PS1="\[${green}\]\w"; # working directory full path
-PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\" \"\[${blue}\]\") \[${white}\]\$ \[${reset}\]"; # Git repository details
+# custom prompt, only displays the current git branch + any indicators from above
+PS1="\$(prompt_git \" \[${violet}\]\" \"\[${blue}\]\") \[${cyan}\]> \[${reset}\]";
 export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";
