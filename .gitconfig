@@ -181,3 +181,8 @@
 [init]
 
 	defaultBranch = main
+
+[user]
+
+	name = Koji Nagata-Brown
+	email = kojinb@gmail.com
