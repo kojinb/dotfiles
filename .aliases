@@ -25,6 +25,9 @@ alias rapture_assume="rapture assume arn:aws:iam::830473435438:role/xacct/power-
 alias run_rails="mc && dc run --rm web bin/rails"
 alias sb_update="mc && dc exec storybook yarn test-storybook:images:update"
 alias reload="source ~/Projects/dotfiles/bootstrap.sh"
+alias sb="storybook"
+alias restart_sb="mc && dc restart storybook && dc logs -f storybook"
+
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
