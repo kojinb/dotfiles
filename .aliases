@@ -29,6 +29,7 @@ alias sb="storybook"
 alias restart_sb="mc && dc restart storybook && dc logs -f storybook"
 alias restart_webpacker="mc && dc restart webpacker && dc logs -f webpacker"
 alias restart_docker="mc && docker system prune -f && dc down --remove-orphans && dc up -d" // lightweight refresh on docker
+alias restart_web="mc && dc restart web && dc logs -f web"
 alias eslint="mc && dc run webpacker yarn eslint 'app/javascript/' --ext .js,.jsx,.ts,.tsx --max-warnings 0"
 
 
