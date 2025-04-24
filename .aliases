@@ -31,6 +31,8 @@ alias restart_webpacker="mc && dc restart webpacker && dc logs -f webpacker"
 alias restart_docker="mc && docker system prune -f && dc down --remove-orphans && dc up -d" // lightweight refresh on docker
 alias restart_web="mc && dc restart web && dc logs -f web"
 alias eslint="mc && dc run webpacker yarn eslint 'app/javascript/' --ext .js,.jsx,.ts,.tsx --max-warnings 0"
+alias assume=". assume"
+alias fix_mcprod_granted="assume masteryconnect-developers --chain arn:aws:iam::226989638317:role/xacct/developer --region us-east-1"
 
 
 # Easier navigation: .., ..., ...., ....., ~ and -
