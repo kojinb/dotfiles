@@ -7,8 +7,8 @@ alias mc_checkout="mc && ./docker/util/checkout.sh"
 alias mc_up="mc && dc up -d"
 alias mc_debug="mc && dc stop web && dc run --rm --service-ports -e DEBUG=true web"
 alias mc_rc="mc && docker-compose exec web bundle exec rails c"
-alias mc_rspec="mc && dc exec specs bundle exec bin/rspec" // runs specific file
-alias specs="mc && dc exec specs bundle exec bin/rspec --tag ~focus" // runs all rspecs
+alias mc_rspec="mc && dc exec specs bundle exec bin/rspec" # runs specific file
+alias specs="mc && dc exec specs bundle exec bin/rspec --tag ~focus" # runs all rspecs
 alias save_ssh="eval `ssh-agent` ssh-add"
 alias mc_check_files="mc && dc exec webpacker yarn install --check-files && dc restart webpacker"
 alias webpacker="dc logs -f -n=100 webpacker"
@@ -29,7 +29,7 @@ alias reload="source ~/Projects/dotfiles/bootstrap.sh"
 alias sb="storybook"
 alias restart_sb="mc && dc restart storybook && dc logs -f storybook"
 alias restart_webpacker="mc && dc restart webpacker && dc logs -f webpacker"
-alias restart_docker="mc && docker system prune -f && dc down --remove-orphans && dc up -d" // lightweight refresh on docker
+alias restart_docker="mc && docker system prune -f && dc down --remove-orphans && dc up -d" # lightweight refresh on docker
 alias restart_web="mc && dc restart web && dc logs -f web"
 alias eslint="mc && dc run webpacker yarn eslint 'app/javascript/' --ext .js,.jsx,.ts,.tsx --max-warnings 0"
 alias assume=". assume"
