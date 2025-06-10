@@ -5,7 +5,7 @@
 alias dc="docker-compose"
 alias save_ssh="eval `ssh-agent` ssh-add"
 alias reload="source ~/Projects/dotfiles/bootstrap.sh"
-alias restart_docker="mc && docker system prune -f && dc down --remove-orphans && dc up -d" # lightweight refresh on docker
+alias restart_docker="docker system prune -f && dc down --remove-orphans && dc up -d" # lightweight refresh on docker
 alias projects="cd ~/Projects"
 
 case "$ENVIRONMENT" in
