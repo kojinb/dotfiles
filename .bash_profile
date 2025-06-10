@@ -1,5 +1,17 @@
 # koji's settings: 
-export PATH="$HOME/.asdf/shims:$HOME/.asdf/bin:$HOME/bin:$PATH"
+[ -f "$HOME/.env" ] && source "$HOME/.env"
+
+case "$ENVIRONMENT" in
+	local)
+		eval "$(/opt/homebrew/bin/brew shellenv)"
+		export PATH="/usr/local/bin:$PATH"
+		;;
+	devbox)
+		export PATH="$HOME/.asdf/shims:$HOME/.asdf/bin:$HOME/bin:$PATH"
+		;;
+	personal)
+		;;
+esac
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
