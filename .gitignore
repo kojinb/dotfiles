@@ -1,3 +1,6 @@
+# kojis git ignored files: 
+.env
+
 # Compiled Python files
 *.pyc
 
