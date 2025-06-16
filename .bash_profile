@@ -4,7 +4,8 @@
 case "$ENVIRONMENT" in
 	local)
 		eval "$(/opt/homebrew/bin/brew shellenv)"
-		export PATH="/usr/local/bin:$PATH"
+		export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH" # brew commands
+		export PATH="/usr/local/bin:$PATH" # docker installations
 		;;
 	devbox)
 		export PATH="$HOME/.asdf/shims:$HOME/.asdf/bin:$HOME/bin:$PATH"

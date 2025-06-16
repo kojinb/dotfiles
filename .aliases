@@ -7,10 +7,12 @@ alias save_ssh="eval `ssh-agent` ssh-add"
 alias reload="source ~/Projects/dotfiles/bootstrap.sh"
 alias restart_docker="docker system prune -f && dc down --remove-orphans && dc up -d" # lightweight refresh on docker
 alias projects="cd ~/Projects"
+alias startup="cd $STARTUP_DIR"
 
 case "$ENVIRONMENT" in
 	local)
 		alias ams="cd ~/Projects/ams-ux"
+		alias tsc="ams && dc run web tsc"
 		;;
 	devbox)
 		alias mc="cd /home/knagatabrown/Projects/mc-mothership"
