@@ -11,7 +11,10 @@ alias startup="cd $STARTUP_DIR"
 
 case "$ENVIRONMENT" in
 	local)
-		alias ams="cd ~/Projects/ams-ux"
+		alias ux="cd ~/Projects/ams-ux"
+		alias ai="cd ~/Projects/ams-ai"
+		alias dotfiles="cd ~/Projects/dotfiles"
+		alias projects="cd ~/Projects"
 		alias tsc="ams && dc run web tsc"
 		;;
 	devbox)
