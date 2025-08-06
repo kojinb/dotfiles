@@ -8,6 +8,7 @@ alias reload="source ~/Projects/dotfiles/bootstrap.sh"
 alias restart_docker="docker system prune -f && dc down --remove-orphans && dc up -d" # lightweight refresh on docker
 alias projects="cd ~/Projects"
 alias startup="cd $STARTUP_DIR"
+alias update_develop="git checkout develop && git pull && git checkout -" # checks out develop, pulls latest and goes back to previous branch
 
 case "$ENVIRONMENT" in
 	local)
