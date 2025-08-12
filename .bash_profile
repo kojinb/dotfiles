@@ -8,6 +8,11 @@ case "$ENVIRONMENT" in
 		export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH" # brew commands
 		export PATH="/opt/homebrew/opt/node/bin:$PATH" # node commands
 		export PATH="/usr/local/bin:$PATH" # docker installations
+		
+		# claude code specific configurations: 
+		export CLAUDE_CODE_USE_BEDROCK=1
+		export AWS_REGION=us-east-1
+		export ANTHROPIC_MODEL=us.anthropic.claude-sonnet-4-20250514-v1:0
 		;;
 	devbox)
 		export PATH="$HOME/.asdf/shims:$HOME/.asdf/bin:$HOME/bin:$PATH"

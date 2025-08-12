@@ -17,6 +17,8 @@ case "$ENVIRONMENT" in
 		alias dotfiles="cd ~/Projects/dotfiles"
 		alias projects="cd ~/Projects"
 		alias tsc="ams && dc run web tsc"
+		alias assume=". assume"
+		alias claude="assume inseng-power-user && claude"
 		;;
 	devbox)
 		alias mc="cd /home/knagatabrown/Projects/mc-mothership"
